@@ -8,10 +8,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Lato", "system-ui"],
+            serif: ["Kaushan Script", "Georgia"],
+            mono: ["Victor Mono", "SFMono-Regular"],
+          },
+        },
+      };
+    </script>
     <title>Anusua Roy</title>
   </head>
-  <body class="bg-zinc-900 p-5 md:p-15">
+  <body class="bg-zinc-900 p-5 md:p-20 font-sans">
     <div
       class="absolute right-5 top-5 md:right-45 md:top-15 flex flex-row gap-2 md:gap-4 text-sm md:text-lg"
     >
@@ -37,11 +54,10 @@
           alt="anusua"
         />
       </div>
-      <p class="text-lg">Hey, I'm</p>
-      <p class="text-3xl pt-3 font-bold tracking-wide text-lime-500">
+      <p class="text-2xl font-serif">Hey, I'm</p>
+      <p class="text-3xl pb-5 font-bold tracking-wide text-lime-500 font-serif">
         Anusua Roy
       </p>
-      <p class="text-md md:text-lg pb-5 font-mono">React Developer at Cognizant</p>
       <p class="text-lg text-center md:px-40">
         Having strong roots in CSS, HTML, JavaScript and TypeScript, I am a
         front-end developer fully trained in modern designing tools and
@@ -50,9 +66,9 @@
     </div>
     <div id="experience" class="flex flex-col text-white">
       <p
-        class="text-3xl my-5 border-b-2 border-zinc-500 font-bold tracking-wider text-lime-500"
+        class="text-3xl my-5 border-b-2 border-zinc-500 font-bold tracking-wider text-lime-500 font-serif"
       >
-        EXPERIENCE
+        Experience
       </p>
       <div
         class="flex flex-col text-left bg-zinc-800 p-6 m-3 rounded-2xl md:mx-40"
@@ -62,7 +78,7 @@
         >
           Associate at Cognizant
         </p>
-        <p class="text-md text-zinc-300 mb-2">AUG 2021 - PRESENT</p>
+        <p class="text-md text-zinc-300 mb-2 font-mono">AUG 2021 - PRESENT</p>
         <ul class="list-disc px-5">
           <li>Experience in working in a Micro-Frontend (MFE) Architecture</li>
           <li>
@@ -100,7 +116,7 @@
         >
           Intern at Cognizant
         </p>
-        <p class="text-md text-zinc-300 mb-2">JAN 2021 - JUN 2021</p>
+        <p class="text-md text-zinc-300 mb-2 font-mono">JAN 2021 - JUN 2021</p>
         <ul class="list-disc px-5">
           <li>
             Developed a Pharmaceutical web application with ASP.Net MVC &
@@ -120,7 +136,7 @@
         >
           Intern at HebbiZ Ltd.
         </p>
-        <p class="text-md text-zinc-300 mb-2">OCT 2020 - JUN 2021</p>
+        <p class="text-md text-zinc-300 mb-2 font-mono">OCT 2020 - JUN 2021</p>
         <ul class="list-disc px-5">
           <li>
             Worked as a Database Designer and Developer (using CloudFirebase)
@@ -132,11 +148,11 @@
         </ul>
       </div>
     </div>
-    <div id="skills" class="flex flex-col text-white">
+    <div id="skills" class="flex flex-col text-white font-mono">
       <p
-        class="text-3xl my-5 border-b-2 border-zinc-500 font-bold tracking-wider text-lime-500"
+        class="text-3xl my-5 border-b-2 border-zinc-500 font-bold tracking-wider text-lime-500 font-serif"
       >
-        SKILLS
+        Skills
       </p>
       <div
         class="flex flex-col text-left bg-zinc-800 p-6 m-3 rounded-2xl md:mx-40"
@@ -233,7 +249,7 @@
               src="images/react-testing-library.png"
               alt="react testing library"
             />
-            <p>React testing Library</p>
+            <p>React Testing Library</p>
           </div>
           <div class="flex flex-col items-center justify-center">
             <img class="h-10 md:h-15" src="images/jest.png" alt="jest" />
@@ -249,7 +265,6 @@
         >
           Backend
         </p>
-       
       </div>
       <div
         class="flex flex-col text-left bg-zinc-800 p-6 m-3 rounded-2xl md:mx-40"
@@ -263,28 +278,29 @@
           class="flex flex-wrap gap-4 flex-row items-left justify-evenly md:mx-40 md:text-lg"
         >
           <div class="flex flex-col items-center justify-center">
-            <img
-              class="h-10 md:h-15"
-              src="images/git.png"
-              alt="git"
-            />
+            <img class="h-10 md:h-15" src="images/git.png" alt="git" />
             <p>GIT</p>
           </div>
           <div class="flex flex-col items-center justify-center">
-            <img class="h-10 md:h-15" src="images/bitbucket.png" alt="bitbucket" />
+            <img
+              class="h-10 md:h-15"
+              src="images/bitbucket.png"
+              alt="bitbucket"
+            />
             <p>Bit Bucket</p>
           </div>
-           <div class="flex flex-col items-center justify-center">
+          <div class="flex flex-col items-center justify-center">
             <img class="h-10 md:h-15" src="images/jira.png" alt="jira" />
             <p>JIRA</p>
           </div>
         </div>
       </div>
+    </div>
     <div id="education" class="flex flex-col text-white">
       <p
-        class="text-3xl my-5 border-b-2 border-zinc-500 font-bold tracking-wider text-lime-500"
+        class="text-3xl my-5 border-b-2 border-zinc-500 font-bold tracking-wider text-lime-500 font-serif"
       >
-        EDUCATION
+        Education
       </p>
       <div
         class="flex flex-col text-left bg-zinc-800 p-6 m-3 rounded-2xl md:mx-40"
@@ -297,8 +313,8 @@
         <p class="text-md text-zinc-300">
           Kalyani Government Engineering College, MAKAUT
         </p>
-        <p class="text-md text-zinc-300">AUG 2018 - JUL 2021</p>
-        <p class="text-md text-zinc-300 mb-1">Grade: 9.30 GPA</p>
+        <p class="text-md text-zinc-300 font-mono">AUG 2018 - JUL 2021</p>
+        <p class="text-md text-zinc-300 mb-1 font-mono">Grade: 9.30 GPA</p>
       </div>
       <div
         class="flex flex-col text-left bg-zinc-800 p-6 m-3 rounded-2xl md:mx-40"
@@ -311,38 +327,38 @@
         <p class="text-md text-zinc-300">
           Asutosh College, University of Calcutta
         </p>
-        <p class="text-md text-zinc-300">AUG 2015 - MAY 2018</p>
-        <p class="text-md text-zinc-300 mb-1">
+        <p class="text-md text-zinc-300 font-mono">AUG 2015 - MAY 2018</p>
+        <p class="text-md text-zinc-300 mb-1 font-mono">
           Grade: 68.50% (Hons), 61.87% (Aggregate)
         </p>
       </div>
     </div>
     <div id="contact" class="flex flex-col text-white">
       <p
-        class="text-3xl my-5 border-b-2 border-zinc-500 font-bold tracking-wider text-lime-500"
+        class="text-3xl my-5 border-b-2 border-zinc-500 font-bold tracking-wider text-lime-500 font-serif"
       >
-        CONTACT
+        Contact
       </p>
       <div
         class="flex gap-4 flex-col justify-evenly md:mx-40 text-3xl md:gap-4"
       >
         <div>
           <i class="fa fa-envelope-o"></i
-          ><a class="pl-2 md:pl-5 text-xl" href="mailto:anusua.roy05@gmail.com"
+          ><a class="pl-4 md:pl-5 text-sm md:text-lg font-mono" href="mailto:anusua.roy05@gmail.com"
             >anusua.roy05@gmail.com</a
           >
         </div>
         <div>
           <i class="fa fa-linkedin"></i
           ><a
-            class="pl-2 md:pl-5 text-xl"
+            class="pl-4 md:pl-5 text-sm md:text-lg font-mono"
             href="https://www.linkedin.com/in/anusuaroy/"
             >linkedin.com/in/anusuaroy/</a
           >
         </div>
         <div>
           <i class="fa fa-github"></i
-          ><a class="pl-2 md:pl-5 text-xl" href="https://github.com/anusua-roy/"
+          ><a class="pl-4 md:pl-5 text-sm md:text-lg font-mono" href="https://github.com/anusua-roy/"
             >github.com/anusua-roy/</a
           >
         </div>
