@@ -30,12 +30,38 @@
   </head>
   <body class="bg-zinc-900 p-5 md:p-20 font-sans">
     <div
-      class="absolute right-5 top-5 md:right-45 md:top-15 flex flex-row gap-2 md:gap-4 text-sm md:text-lg"
+      class="hidden md:inline-block absolute right-5 top-5 md:right-45 md:top-15 flex flex-row gap-2 md:gap-4 text-sm md:text-lg"
     >
       <a class="text-lime-500 md:font-bold" href="#experience">EXPERIENCE</a>
       <a class="text-lime-500 md:font-bold" href="#skills">SKILLS</a>
       <a class="text-lime-500 md:font-bold" href="#education">EDUCATION</a>
       <a class="text-lime-500 md:font-bold" href="#contact">CONTACT</a>
+    </div>
+    <button
+      class="absolute left-5 top-5 md:right-15 md:bottom-15 h-10 md:h-15 w-10 text-lime-500 text-3xl text-center hover:bg-lime-900 hover:text-white transform hover:scale-120 duration-200"
+      onclick="openMenu()"
+    >
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div
+      id="small-screen-menu"
+      class="flex flex-col items-left justify-evenly fixed top-0 left-0 h-screen w-1/2 bg-slate-50 bg-opacity-80 py-4 pl-4"
+    >
+      <a
+        class="text-zinc-900 font-bold"
+        href="#experience"
+        onclick="closeMenu()"
+        >EXPERIENCE</a
+      >
+      <a class="text-zinc-900 font-bold" href="#skills" onclick="closeMenu()"
+        >SKILLS</a
+      >
+      <a class="text-zinc-900 font-bold" href="#education" onclick="closeMenu()"
+        >EDUCATION</a
+      >
+      <a class="text-zinc-900 font-bold" href="#contact" onclick="closeMenu()"
+        >CONTACT</a
+      >
     </div>
     <a
       href="#about"
@@ -385,4 +411,18 @@
       </div>
     </div>
   </body>
+  <script>
+    function openMenu() {
+      var x = document.getElementById("small-screen-menu");
+      if (x.style.display === "none" || x.style.display === "") {
+        x.style.display = "flex";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function closeMenu() {
+      document.getElementById("small-screen-menu").style.display = "none";
+    }
+  </script>
 </html>
