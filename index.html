@@ -38,14 +38,14 @@
       <a class="text-lime-500 md:font-bold" href="#contact">CONTACT</a>
     </div>
     <button
-      class="absolute left-5 top-5 md:right-15 md:bottom-15 h-10 md:h-15 w-10 text-lime-500 text-3xl text-center hover:bg-lime-900 hover:text-white transform hover:scale-120 duration-200"
+      class="absolute left-5 top-5 h-10 w-10 text-lime-500 text-3xl text-center hover:bg-lime-900 hover:text-white transform hover:scale-120 duration-200"
       onclick="openMenu()"
     >
       <i class="fa fa-bars" aria-hidden="true"></i>
     </button>
     <div
       id="small-screen-menu"
-      class="flex flex-col items-left justify-evenly fixed top-0 left-0 h-screen w-1/2 bg-slate-50 bg-opacity-80 py-4 pl-4"
+      class="hidden flex-col items-left justify-evenly fixed top-0 left-0 h-screen w-full bg-slate-50 bg-opacity-80 py-4 pl-4"
     >
       <a
         class="text-zinc-900 font-bold"
@@ -63,6 +63,13 @@
         >CONTACT</a
       >
     </div>
+    <button
+      id="close"
+      onclick="closeMenu()"
+      class="hidden fixed right-5 top-5 h-10 w-10 text-zinc-900 text-3xl text-center hover:text-lime-900 transform hover:scale-120 duration-200"
+    >
+      <i class="fa fa-times-circle" aria-hidden="true"></i>
+    </button>
     <a
       href="#about"
       class="fixed right-5 bottom-5 md:right-15 md:bottom-15 bg-lime-500 rounded-[50%] h-10 md:h-15 w-10 text-zinc-900 text-3xl text-center hover:bg-lime-900 hover:text-white transform hover:scale-120 duration-200"
@@ -414,15 +421,19 @@
   <script>
     function openMenu() {
       var x = document.getElementById("small-screen-menu");
+      var y = document.getElementById("close");
       if (x.style.display === "none" || x.style.display === "") {
         x.style.display = "flex";
+        y.style.display = "inline-block";
       } else {
         x.style.display = "none";
+        y.style.display = "none";
       }
     }
 
     function closeMenu() {
       document.getElementById("small-screen-menu").style.display = "none";
+      document.getElementById("close").style.display = "none";
     }
   </script>
 </html>
